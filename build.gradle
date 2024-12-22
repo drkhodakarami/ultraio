@@ -140,12 +140,12 @@ dependencies {
 	// JEI Runtime Only
 	//modRuntimeOnly("mezz.jei:jei-${project.jei_mc_version}-fabric:${project.jei_version}")
 
-	include(implementation project(path:':ultraio_base', configuration: "namedElements"))
-	include(implementation project(path: ':ultraio_battle', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_base', configuration: "namedElements"))
 	include(implementation project(path: ':ultraio_cable', configuration: "namedElements"))
 	include(implementation project(path: ':ultraio_command', configuration: "namedElements"))
 	include(implementation project(path: ':ultraio_decoration', configuration: "namedElements"))
 	include(implementation project(path: ':ultraio_effect', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_battle', configuration: "namedElements"))
 	include(implementation project(path: ':ultraio_goo', configuration: "namedElements"))
 	include(implementation project(path: ':ultraio_machina', configuration: "namedElements"))
 	include(implementation project(path: ':ultraio_ore', configuration: "namedElements"))

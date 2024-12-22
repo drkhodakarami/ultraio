@@ -12,11 +12,11 @@ pluginManagement {
 rootProject.name = 'ultraio'
 
 include ':ultraio_base'
-include ':ultraio_battle'
 include ':ultraio_cable'
 include ':ultraio_command'
 include ':ultraio_decoration'
 include ':ultraio_effect'
+include ':ultraio_battle'
 include ':ultraio_goo'
 include ':ultraio_machina'
 include ':ultraio_ore'

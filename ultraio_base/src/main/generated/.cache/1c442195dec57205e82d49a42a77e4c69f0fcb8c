@@ -1,6 +1,6 @@
-// 1.21.4	2024-12-22T23:29:43.547202	Ultra IO Base/Tags for minecraft:block
+// 1.21.4	2024-12-23T01:44:42.1377734	Ultra IO Base/Tags for minecraft:block
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\c\tags\block\gem_blocks.json
 b37630cf13ccad6a1b37ca9ac3bd773b09ad7a41 data\c\tags\block\machines.json
-3e04ac352b14b33d169a53ebce0491dbb1507e44 data\ultraio\tags\block\hammer_blacklist.json
 b37630cf13ccad6a1b37ca9ac3bd773b09ad7a41 data\ultraio\tags\block\excavator_blacklist.json
+3e04ac352b14b33d169a53ebce0491dbb1507e44 data\ultraio\tags\block\hammer_blacklist.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\ultraio\tags\block\incorrect_for_enderite_tool.json

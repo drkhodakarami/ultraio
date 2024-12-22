@@ -11,6 +11,14 @@ base {
 }
 
 repositories {
+    maven {
+        name = 'Ladysnake Mods'
+        url = 'https://maven.ladysnake.org/releases'
+        content {
+            includeGroup 'io.github.ladysnake'
+            includeGroupByRegex 'io\\.github\\.onyxstudios.*'
+        }
+    }
     mavenCentral()
     maven { url 'https://maven.fabricmc.net/' }
     maven { url 'https://repo.repsy.io/mvn/jiraiyah/jilibs' }
@@ -34,7 +42,7 @@ dependencies {
     modImplementation include("jiraiyah.reference:jireference:${jireference_version}")
     modImplementation include("jiraiyah.register:jiregister:${jiregister_version}")
 
-    implementation project(path: ':ultraio_base', configuration: "namedElements")
+    implementation project(path: ':ultraio_base', configuration: 'namedElements')
     implementation project(path: ':ultraio_effect', configuration: "namedElements")
 }
 

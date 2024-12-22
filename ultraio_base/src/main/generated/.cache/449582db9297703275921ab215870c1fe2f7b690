@@ -1,4 +1,13 @@
-// 1.21.4	2024-12-22T23:29:43.5687004	Ultra IO Base/Block Loot Tables
+// 1.21.4	2024-12-23T01:44:42.1507656	Ultra IO Base/Block Loot Tables
+673c6fd4b8f500b3b235237b50e39088ef6f8cbe data\ultraio_base\loot_table\blocks\block_raw_citrine.json
+7a23f76f570245b24226e95af411a59e249277b5 data\ultraio_base\loot_table\blocks\block_raw_ruby.json
+b4348a5ebbe2e6946d86f312ba73722207bab2c7 data\ultraio_base\loot_table\blocks\block_raw_quartz.json
+a12ac9078119fb7a49873a4542ad86b0c64c8fd7 data\ultraio_base\loot_table\blocks\block_ruby.json
+e3627c9cc06eb52427673c7e126d1a4e289ca542 data\ultraio_base\loot_table\blocks\block_citrine.json
+4a7f25a5fb4bef3bba00e1c8367c6358a4cd1bf9 data\ultraio_base\loot_table\blocks\block_raw_enderite.json
 3e207d9ea679fbb2438c0ee4ad5699536212f53f data\ultraio_base\loot_table\blocks\carrot_box.json
+1a0b37a49aec2cfe7f8883f008dee8221aa67bda data\ultraio_base\loot_table\blocks\block_enderite.json
 03c1bc3a5fdac92ee84fc60217f9d066d38924cd data\ultraio_base\loot_table\blocks\elevator.json
 edce529794c43561675085ca194a7edc18d22633 data\ultraio_base\loot_table\blocks\potato_box.json
+1d3f45ed1ee32dc4d81a6d145089a1e593d7512d data\ultraio_base\loot_table\blocks\block_sapphire.json
+fd4504acb0483648be219e162570ab1190df2eac data\ultraio_base\loot_table\blocks\block_raw_sapphire.json

@@ -8,3 +8,6 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+include ':ultraio_base'
+include ':ultraio_effect'

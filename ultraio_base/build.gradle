@@ -78,3 +78,14 @@ publishing {
 	repositories {
 	}
 }
+
+configurations {
+	namedElements {
+		canBeResolved = false
+		canBeConsumed = true
+	}
+}
+
+artifacts {
+	namedElements jar
+}
