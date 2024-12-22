@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "ultraio_base:block_ruby"
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultraio_base:gem_ruby"
+  }
+}

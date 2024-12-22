@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "ultraio_base:block_raw_enderite"
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultraio_base:raw_enderite"
+  }
+}

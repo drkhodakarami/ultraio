@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ultraio_base:block/block_citrine"
+    }
+  }
+}
