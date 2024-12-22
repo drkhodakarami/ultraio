@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "ultraio_machina",
+  "version": "${version}",
+  "name": "Ultra IO Machina",
+  "description": "",
+  "authors": [
+    "Jiraiyah"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "MIT",
+  "icon": "assets/ultraio_machina/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "jiraiyah.ultraio_machina.MainMachina"
+    ],
+    "fabric-datagen": [
+      "jiraiyah.ultraio_machina.DatagenMachina"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_ver}",
+    "minecraft": "~${game_ver}",
+    "java": ">=${java_ver}",
+    "fabric-api": "*",
+    "ultraio_base": "*"
+  }
+}

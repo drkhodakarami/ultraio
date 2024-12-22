@@ -1,4 +1,5 @@
 plugins {
+	id 'java'
 	id 'fabric-loom' version '1.9-SNAPSHOT'
 	id 'maven-publish'
 }
@@ -7,7 +8,7 @@ version = project.mod_version
 group = project.maven_group
 
 base {
-	archivesName = project.archives_base_name
+	archivesName = "${project.archives_base_name}"
 }
 
 repositories {
@@ -63,5 +64,17 @@ java {
 jar {
 	from("LICENSE") {
 		rename { "${it}_${project.base.archivesName.get()}"}
+	}
+}
+
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			artifactId = project.archives_base_name
+			from components.java
+		}
+	}
+
+	repositories {
 	}
 }

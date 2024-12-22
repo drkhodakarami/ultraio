@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 2400,
+  "experience": 2.0,
+  "group": "unstable_goo",
+  "ingredient": "ultraio_base:unstable_goo_base",
+  "result": {
+    "id": "ultraio_base:unstable_goo_core"
+  }
+}

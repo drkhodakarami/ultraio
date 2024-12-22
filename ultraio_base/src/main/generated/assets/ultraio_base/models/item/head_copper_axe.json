@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ultraio_base:item/head_copper_axe"
+  }
+}

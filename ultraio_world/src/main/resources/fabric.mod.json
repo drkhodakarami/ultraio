@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "ultraio_world",
+  "version": "${version}",
+  "name": "Ultra IO World",
+  "description": "",
+  "authors": [
+    "Jiraiyah"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "MIT",
+  "icon": "assets/ultraio_world/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "jiraiyah.ultraio_world.MainWorld"
+    ],
+    "fabric-datagen": [
+      "jiraiyah.ultraio_world.DatagenWorld"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_ver}",
+    "minecraft": "~${game_ver}",
+    "java": ">=${java_ver}",
+    "fabric-api": "*",
+    "ultraio_base": "*"
+  }
+}

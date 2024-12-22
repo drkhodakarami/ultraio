@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "ultraio_decoration",
+  "version": "${version}",
+  "name": "Ultra IO Decoration",
+  "description": "",
+  "authors": [
+    "Jiraiyah"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "MIT",
+  "icon": "assets/ultraio_decoration/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "jiraiyah.ultraio_decoration.MainDecoration"
+    ],
+    "fabric-datagen": [
+      "jiraiyah.ultraio_decoration.DatagenDecoration"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_ver}",
+    "minecraft": "~${game_ver}",
+    "java": ">=${java_ver}",
+    "fabric-api": "*",
+    "ultraio_base": "*"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "ultraio_base:enderman_eye",
+    "G": "ultraio_base:enderman_gland",
+    "H": "ultraio_base:enderman_heart",
+    "I": "ultraio_base:ingot_enderite"
+  },
+  "pattern": [
+    "EIE",
+    "GIG",
+    "IHI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ultraio_base:ender_charm"
+  }
+}

@@ -24,6 +24,17 @@
 		"minecraft": "~${game_ver}",
 		"java": ">=${java_ver}",
 		"fabric-api": "*",
-		"ultraio_base": "*"
+		"ultraio_base": "*",
+		"ultraio_battle": "*",
+		"ultraio_cable": "*",
+		"ultraio_command": "*",
+		"ultraio_decoration": "*",
+		"ultraio_effect": "*",
+		"ultraio_goo": "*",
+		"ultraio_machina": "*",
+		"ultraio_ore": "*",
+		"ultraio_tool": "*",
+		"ultraio_wood": "*",
+		"ultraio_world": "*"
 	}
 }

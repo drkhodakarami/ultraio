@@ -1,0 +1,22 @@
+{
+  "values": [
+    "ultraio_base:gear_copper",
+    "ultraio_base:gear_diamond",
+    "ultraio_base:gear_emerald",
+    "ultraio_base:gear_enderite",
+    "ultraio_base:gear_energized",
+    "ultraio_base:gear_gold",
+    "ultraio_base:gear_iron",
+    "ultraio_base:gear_lapis",
+    "ultraio_base:gear_netherite",
+    "ultraio_base:gear_obsidian",
+    "ultraio_base:gear_prismarine",
+    "ultraio_base:gear_quartz",
+    "ultraio_base:gear_ruby",
+    "ultraio_base:gear_sapphire",
+    "ultraio_base:gear_shulker",
+    "ultraio_base:gear_stone",
+    "ultraio_base:gear_vibrant",
+    "ultraio_base:gear_wood"
+  ]
+}

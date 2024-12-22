@@ -1,0 +1,20 @@
+{
+  "values": [
+    "ultraio_base:cast_axe",
+    "ultraio_base:cast_binding",
+    "ultraio_base:cast_excavator",
+    "ultraio_base:cast_gear",
+    "ultraio_base:cast_gem",
+    "ultraio_base:cast_hammer",
+    "ultraio_base:cast_handle",
+    "ultraio_base:cast_hoe",
+    "ultraio_base:cast_ingot",
+    "ultraio_base:cast_nugget",
+    "ultraio_base:cast_pickaxe",
+    "ultraio_base:cast_plate",
+    "ultraio_base:cast_rod",
+    "ultraio_base:cast_shovel",
+    "ultraio_base:cast_sword",
+    "ultraio_base:cast_wire"
+  ]
+}

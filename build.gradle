@@ -6,7 +6,7 @@ plugins {
 version = project.mod_version
 
 base {
-	archivesName = project.archives_base_name
+	archivesName = "${project.archives_base_name}"
 }
 
 repositories {
@@ -75,13 +75,13 @@ dependencies {
 	modImplementation include("jiraiyah.machina:jimachina:${jimachina_version}")
 
 	// Energy API Handling Dependency <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-	//include modApi("teamreborn:energy:${project.energy_version}") {
-	//	exclude(group: "net.fabricmc.fabric-api")
-	//}
+	include modApi("teamreborn:energy:${project.energy_version}") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
 
 	// PAL <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-	//modImplementation "io.github.ladysnake:PlayerAbilityLib:${project.pal_version}"
-	//include "io.github.ladysnake:PlayerAbilityLib:${project.pal_version}"
+	modImplementation "io.github.ladysnake:PlayerAbilityLib:${project.pal_version}"
+	include "io.github.ladysnake:PlayerAbilityLib:${project.pal_version}"
 
 
 	// Jade
@@ -97,12 +97,12 @@ dependencies {
 	//modImplementation include("io.github.cottonmc:LibGui:${project.libgui_version}")
 
 	// Terra Former Wood: Needed for Sign and Boat <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-	//modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_version}"
-	//include "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_version}"
+	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_version}"
+	include "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_version}"
 
 	// Kyrptonaught <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-	//modImplementation "net.kyrptonaught:customportalapi:${project.kyrptonaught_version}"
-	//include "net.kyrptonaught:customportalapi:${project.kyrptonaught_version}"
+	modImplementation "net.kyrptonaught:customportalapi:${project.kyrptonaught_version}"
+	include "net.kyrptonaught:customportalapi:${project.kyrptonaught_version}"
 
 	// EMI Compatibility <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	//modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
@@ -141,6 +141,17 @@ dependencies {
 	//modRuntimeOnly("mezz.jei:jei-${project.jei_mc_version}-fabric:${project.jei_version}")
 
 	include(implementation project(path:':ultraio_base', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_battle', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_cable', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_command', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_decoration', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_effect', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_goo', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_machina', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_ore', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_tool', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_wood', configuration: "namedElements"))
+	include(implementation project(path: ':ultraio_world', configuration: "namedElements"))
 }
 
 processResources {
@@ -171,5 +182,17 @@ java {
 jar {
 	from("LICENSE") {
 		rename { "${it}_${project.base.archivesName.get()}"}
+	}
+}
+
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			artifactId = project.archives_base_name
+			from components.java
+		}
+	}
+
+	repositories {
 	}
 }

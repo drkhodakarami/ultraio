@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 1200,
+  "experience": 2.0,
+  "group": "combustion_core",
+  "ingredient": "ultraio_base:hot_coal",
+  "result": {
+    "id": "ultraio_base:unstable_goo_base"
+  }
+}

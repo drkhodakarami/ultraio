@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ultraio_battle",
+  "version": "${version}",
+  "name": "Ultra IO Battle",
+  "description": "",
+  "authors": [
+    "Jiraiyah"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "MIT",
+  "icon": "assets/ultraio_battle/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "jiraiyah.ultraio_battle.MainBattle"
+    ],
+    "fabric-datagen": [
+      "jiraiyah.ultraio_battle.DatagenBattle"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_ver}",
+    "minecraft": "~${game_ver}",
+    "java": ">=${java_ver}",
+    "fabric-api": "*",
+    "ultraio_base": "*",
+    "ultraio_effect": "*"
+  }
+}

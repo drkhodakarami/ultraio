@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": "ultraio_base:hot_coal",
+    "I": "ultraio_base:unstable_goo_base",
+    "P": "ultraio_base:reinforced_iron"
+  },
+  "pattern": [
+    "PPP",
+    "HIH",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ultraio_base:thermal_core"
+  }
+}

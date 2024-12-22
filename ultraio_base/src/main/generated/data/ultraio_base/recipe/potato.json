@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "ultraio_base:potato_box"
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:potato"
+  }
+}
