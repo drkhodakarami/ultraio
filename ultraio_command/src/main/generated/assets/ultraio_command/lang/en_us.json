@@ -1,0 +1,5 @@
+{
+  "ultraio_command.dclr.end": "Finished Cleaning",
+  "ultraio_command.dclr.error": "Wrong Type, it should be one of the choices: ore, block, fluid, all",
+  "ultraio_command.dclr.start": "Starting to Clean"
+}

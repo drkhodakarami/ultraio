@@ -39,7 +39,7 @@ dependencies {
     modImplementation include("jiraiyah.energy:jienergy:${jienergy_version}")
     modImplementation include("jiraiyah.machina:jimachina:${jimachina_version}")
 
-    implementation project(path: ':ultraio_base', configuration: "namedElements")
+    implementation project(':ultraio_base')
 }
 
 processResources {

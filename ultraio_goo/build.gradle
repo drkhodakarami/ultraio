@@ -35,7 +35,7 @@ dependencies {
     modImplementation include("jiraiyah.register:jiregister:${jiregister_version}")
     modImplementation include("jiraiyah.jiralib:jiralib:${jiralib_version}")
 
-    implementation project(path: ':ultraio_base', configuration: "namedElements")
+    implementation project(':ultraio_base')
 }
 
 processResources {

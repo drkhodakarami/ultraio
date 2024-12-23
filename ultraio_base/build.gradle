@@ -1,5 +1,4 @@
 plugins {
-	id 'java'
 	id 'fabric-loom' version '1.9-SNAPSHOT'
 	id 'maven-publish'
 }
@@ -77,15 +76,4 @@ publishing {
 
 	repositories {
 	}
-}
-
-configurations {
-	namedElements {
-		canBeResolved = false
-		canBeConsumed = true
-	}
-}
-
-artifacts {
-	namedElements jar
 }
