@@ -1,6 +1,6 @@
 package jiraiyah.ultraio_command;
 
-import jiraiyah.ultraio_command.MainCommand;
+import jiraiyah.ultraio_command.datagen.CommandEnLanguageProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 

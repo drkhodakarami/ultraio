@@ -12,15 +12,63 @@ import net.minecraft.client.data.TexturedModel;
 
 public class BaseModelProvider extends FabricModelProvider
 {
+    public static BlockStateModelGenerator.BlockTexturePool
+            CITRINE_TEXTURE_POOL, RUBY_TEXTURE_POOL, SAPPHIRE_TEXTURE_POOL, ENDERITE_TEXTURE_POOL;
+
     public BaseModelProvider(FabricDataOutput output)
     {
         super(output);
     }
 
+    //region ITEM MODEL HELPER METHODS
     private static void registerFoods(ItemModelGenerator generator)
     {
         generator.register(BaseItems.COOKED_EGG, Models.GENERATED);
         generator.register(BaseItems.EGG_AND_BREAD, Models.GENERATED);
+    }
+
+    @Override
+    public void generateBlockStateModels(BlockStateModelGenerator generator)
+    {
+        MainBase.LOGGER.logG("Generating Block Model Data");
+
+        generator.registerSingleton(BaseBlocks.CARROT_BOX, TexturedModel.CUBE_BOTTOM_TOP);
+        generator.registerSingleton(BaseBlocks.POTATO_BOX, TexturedModel.CUBE_BOTTOM_TOP);
+        generator.registerSimpleCubeAll(BaseBlocks.ANGEL);
+        generator.registerSingleton(BaseBlocks.ELEVATOR, TexturedModel.CUBE_BOTTOM_TOP);
+        generator.registerSimpleCubeAll(BaseBlocks.CITRINE);
+        generator.registerSimpleCubeAll(BaseBlocks.RUBY);
+        generator.registerSimpleCubeAll(BaseBlocks.SAPPHIRE);
+        generator.registerSimpleCubeAll(BaseBlocks.RAW_CITRINE);
+        generator.registerSimpleCubeAll(BaseBlocks.RAW_ENDERITE);
+        generator.registerSimpleCubeAll(BaseBlocks.RAW_QUARTZ);
+        generator.registerSimpleCubeAll(BaseBlocks.RAW_RUBY);
+        generator.registerSimpleCubeAll(BaseBlocks.RAW_SAPPHIRE);
+
+        CITRINE_TEXTURE_POOL = generator.registerCubeAllModelTexturePool(BaseBlocks.CITRINE);
+        ENDERITE_TEXTURE_POOL = generator.registerCubeAllModelTexturePool(BaseBlocks.ENDERITE);
+        RUBY_TEXTURE_POOL = generator.registerCubeAllModelTexturePool(BaseBlocks.RUBY);
+        SAPPHIRE_TEXTURE_POOL = generator.registerCubeAllModelTexturePool(BaseBlocks.SAPPHIRE);
+    }
+
+    @Override
+    public void generateItemModels(ItemModelGenerator generator)
+    {
+        MainBase.LOGGER.logG("Generating Item Model Data");
+
+        registerFoods(generator);
+        registerFuels(generator);
+        registerMobDrops(generator);
+        registerCastItems(generator);
+        registerDustItems(generator);
+        registerGearItems(generator);
+        registerGemItems(generator);
+        registerIngotItems(generator);
+        registerPlateItems(generator);
+        registerRawItems(generator);
+        registerRodItems(generator);
+        registerToolHeadItems(generator);
+        registerSpecialItems(generator);
     }
 
     private static void registerFuels(ItemModelGenerator generator)
@@ -252,44 +300,5 @@ public class BaseModelProvider extends FabricModelProvider
         generator.register(BaseItems.SLOT_DISABLED, Models.GENERATED);
         generator.register(BaseItems.SLOT_ENABLED, Models.GENERATED);
     }
-
-    @Override
-    public void generateBlockStateModels(BlockStateModelGenerator generator)
-    {
-        MainBase.LOGGER.logG("Generating Block Model Data");
-
-        generator.registerSingleton(BaseBlocks.CARROT_BOX, TexturedModel.CUBE_BOTTOM_TOP);
-        generator.registerSingleton(BaseBlocks.POTATO_BOX, TexturedModel.CUBE_BOTTOM_TOP);
-        generator.registerSimpleCubeAll(BaseBlocks.ANGEL);
-        generator.registerSingleton(BaseBlocks.ELEVATOR, TexturedModel.CUBE_BOTTOM_TOP);
-        generator.registerSimpleCubeAll(BaseBlocks.CITRINE);
-        generator.registerSimpleCubeAll(BaseBlocks.RUBY);
-        generator.registerSimpleCubeAll(BaseBlocks.SAPPHIRE);
-        generator.registerSimpleCubeAll(BaseBlocks.ENDERITE);
-        generator.registerSimpleCubeAll(BaseBlocks.RAW_CITRINE);
-        generator.registerSimpleCubeAll(BaseBlocks.RAW_ENDERITE);
-        generator.registerSimpleCubeAll(BaseBlocks.RAW_QUARTZ);
-        generator.registerSimpleCubeAll(BaseBlocks.RAW_RUBY);
-        generator.registerSimpleCubeAll(BaseBlocks.RAW_SAPPHIRE);
-    }
-
-    @Override
-    public void generateItemModels(ItemModelGenerator generator)
-    {
-        MainBase.LOGGER.logG("Generating Item Model Data");
-
-        registerFoods(generator);
-        registerFuels(generator);
-        registerMobDrops(generator);
-        registerCastItems(generator);
-        registerDustItems(generator);
-        registerGearItems(generator);
-        registerGemItems(generator);
-        registerIngotItems(generator);
-        registerPlateItems(generator);
-        registerRawItems(generator);
-        registerRodItems(generator);
-        registerToolHeadItems(generator);
-        registerSpecialItems(generator);
-    }
+    //endregion
 }

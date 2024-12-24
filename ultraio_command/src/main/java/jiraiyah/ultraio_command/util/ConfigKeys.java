@@ -1,4 +1,4 @@
-package jiraiyah.ultraio_command;
+package jiraiyah.ultraio_command.util;
 
 public class ConfigKeys
 {

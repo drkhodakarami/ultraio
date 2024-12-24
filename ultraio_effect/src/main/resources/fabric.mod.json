@@ -26,7 +26,6 @@
     "fabricloader": ">=${loader_ver}",
     "minecraft": "~${game_ver}",
     "java": ">=${java_ver}",
-    "fabric-api": "*",
-    "ultraio_base": "*"
+    "fabric-api": "*"
   }
 }

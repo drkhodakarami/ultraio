@@ -1,5 +1,6 @@
 package jiraiyah.ultraio_decoration.registry;
 
+import jiraiyah.register.Registers;
 import jiraiyah.ultraio_base.registry.BaseBlocks;
 import jiraiyah.ultraio_decoration.MainDecoration;
 import net.minecraft.block.*;
@@ -27,6 +28,8 @@ public class DecorationBlocks
     public static void init()
     {
         MainDecoration.LOGGER.log("Registering Blocks");
+
+        Registers.init(MainDecoration.ModID);
 
         CITRINE_STAIRS = registerStair("block_citrine_stairs", BaseBlocks.CITRINE, Blocks.AMETHYST_BLOCK);
         ENDERITE_STAIRS = registerStair("block_enderite_stairs", BaseBlocks.ENDERITE, Blocks.IRON_BLOCK);

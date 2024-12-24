@@ -42,11 +42,9 @@ dependencies {
 
     // Ji Lib Mods Dependency <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     modImplementation include("jiraiyah.logger:jilogger:${jilogger_version}")
-    modImplementation include("jiraiyah.config:jiconfig:${jiconfig_version}")
-    modImplementation include("jiraiyah.reference:jireference:${jireference_version}")
     modImplementation include("jiraiyah.register:jiregister:${jiregister_version}")
 
-    implementation project(':ultraio_base')
+    //implementation project(':ultraio_base')
 }
 
 processResources {

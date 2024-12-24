@@ -2,6 +2,7 @@ package jiraiyah.ultraio_command;
 
 import com.mojang.datafixers.util.Pair;
 import jiraiyah.config.Config;
+import jiraiyah.ultraio_command.util.ConfigKeys;
 
 public class Configs extends Config
 {

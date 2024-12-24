@@ -31,6 +31,10 @@ public class ReferenceBase extends JiReference
 
     //region BLOCK TAGS
     public final TagKey<Block> GEM_BLOCKS = createBlockCommonTag("gem_blocks");
+    public final TagKey<Block> CITRINE_BLOCKS = createBlockCommonTag("citrine_blocks");
+    public final TagKey<Block> ENDERITE_BLOCKS = createBlockCommonTag("enderite_blocks");
+    public final TagKey<Block> RUBY_BLOCKS = createBlockCommonTag("ruby_blocks");
+    public final TagKey<Block> SAPPHIRE_BLOCKS = createBlockCommonTag("sapphire_blocks");
     public final TagKey<Block> IS_MACHINE = createBlockCommonTag("machines");
     public final TagKey<Block> HAMMER_BLACKLIST = createBlockTag("hammer_blacklist");
     public final TagKey<Block> EXCAVATOR_BLACKLIST = createBlockTag("excavator_blacklist");
