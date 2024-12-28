@@ -1,0 +1,79 @@
+plugins {
+	id 'fabric-loom' version '1.9-SNAPSHOT'
+	id 'maven-publish'
+}
+
+version = rootProject.mod_version
+group = project.maven_group
+
+base {
+	archivesName = "${project.archives_base_name}"
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://maven.fabricmc.net/' }
+	maven { url 'https://repo.repsy.io/mvn/jiraiyah/jilibs' }
+}
+
+fabricApi {
+	configureDataGeneration {
+		client = true
+	}
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+    mappings "net.fabricmc:yarn:${rootProject.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${rootProject.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_version}"
+
+	// Ji Lib Mods Dependency <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    modImplementation include("jiraiyah.logger:jilogger:${rootProject.jilogger_version}")
+    modImplementation include("jiraiyah.config:jiconfig:${rootProject.jiconfig_version}")
+    modImplementation include("jiraiyah.reference:jireference:${rootProject.jireference_version}")
+    modImplementation include("jiraiyah.register:jiregister:${rootProject.jiregister_version}")
+}
+
+processResources {
+    inputs.property "version", rootProject.version
+    inputs.property "loader_ver", rootProject.loader_version
+    inputs.property "game_ver", rootProject.minecraft_version
+    inputs.property "java_ver", rootProject.java_version
+
+	filesMatching("fabric.mod.json") {
+        expand "version": rootProject.version,
+                "loader_ver": rootProject.loader_version,
+                "game_ver": rootProject.minecraft_version,
+                "java_ver": rootProject.java_version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 21
+}
+
+java {
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.base.archivesName.get()}"}
+	}
+}
+
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			artifactId = project.archives_base_name
+			from components.java
+		}
+	}
+
+	repositories {
+	}
+}

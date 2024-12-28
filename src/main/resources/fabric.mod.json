@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "ultraio",
+	"version": "${version}",
+	"name": "Ultra IO",
+	"description": "",
+	"authors": [
+		"Jiraiyah"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "MIT",
+	"icon": "assets/ultraio/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"jiraiyah.ultraio.Main"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=${loader_ver}",
+		"minecraft": "~${game_ver}",
+		"java": ">=${java_ver}",
+		"fabric-api": "*",
+		"ultraio_base": "*",
+		"ultraio_battle": "*",
+		"ultraio_cable": "*",
+		"ultraio_command": "*",
+		"ultraio_decoration": "*",
+		"ultraio_effect": "*",
+		"ultraio_goo": "*",
+		"ultraio_machina": "*",
+		"ultraio_ore": "*",
+		"ultraio_tool": "*",
+		"ultraio_wood": "*",
+		"ultraio_world": "*"
+	}
+}
